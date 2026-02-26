@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frozen Pizza</title>
+<script>
+function addToCart(){
+localStorage.setItem("pizza","250");
+alert("Pizza added to cart!");
+}
+function nextPage(){
+let ans=document.getElementById("amount").value.toLowerCase();
+if(ans==="250"){
+window.location.href="Testy2.html";
+}else{
+alert("Please enter ruppes.250");
+}
+}
+</script>
+<style>
+body{text-align:center;background:#ff9999;font-family:Arial;padding:30px;}
+img{width:250px;border-radius:10px;}
+button{padding:10px 20px;margin:10px;}
+</style>
+</head>
+<body>
+<h2>🍕 Frozen Pizza - ₹250</h2>
+<img src="https://images.unsplash.com/photo-1601924928584-7e8b63a7d0f5">
+<br>
+<button onclick="addToCart()">Add to Cart</button><br>
+<input type="text" id="amount" placeholder="Enter 250">
+<button onclick="nextPage()">Next</button>
+<br><br>
+<a href="cart.html">Go to Cart</a>
+</body>
+</html>
