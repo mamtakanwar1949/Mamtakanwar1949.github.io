@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riddle Game</title>
+<style>
+body{
+    font-family: Arial;
+    text-align:center;
+    background:#f4f4f4;
+    padding:40px;
+}
+.container{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+button{
+    padding:10px 20px;
+    font-size:18px;
+    background:#4CAF50;
+    color:white;
+    border:none;
+    border-radius:5px;
+}
+button:hover{
+    background:#45a049;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Welcome to the Riddle Challenge!</h1>
+<h3>Owner: Tanisha Kanwar</h3>
+<p>This is a fun 9-level riddle game. Solve each riddle correctly to move to the next level. Think smart and type your answer carefully!</p>
+<a href="riddle1.html">
+<button>Start Game</button>
+</a>
+</div>
+</body>
+</html>
