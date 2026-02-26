@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ice Cream</title>
+<script>
+function addToCart(){
+localStorage.setItem("icecream","250");
+alert("Ice Cream added to cart!");
+}
+function nextPage(){
+let ans=document.getElementById("amount").value.toLowerCase();
+if(ans==="250"){
+window.location.href="Testy3.html";
+}else{
+alert("Please enter ruppes.250");
+}
+}
+</script>
+<style>
+body{text-align:center;background:#ffccff;font-family:Arial;padding:30px;}
+img{width:250px;border-radius:10px;}
+button{padding:10px 20px;margin:10px;}
+</style>
+</head>
+<body>
+<h2>🍦 Ice Cream - ₹250</h2>
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+<br>
+<button onclick="addToCart()">Add to Cart</button><br>
+<input type="text" id="amount" placeholder="Enter 250">
+<button onclick="nextPage()">Next</button>
+<br><br>
+<a href="cart.html">Go to Cart</a>
+</body>
+</html>
