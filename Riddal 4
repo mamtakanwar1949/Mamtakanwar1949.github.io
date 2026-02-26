@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riddle 3</title>
+<script>
+function checkAnswer(){
+let ans=document.getElementById("answer").value.toLowerCase();
+if(ans==="map"){
+window.location.href="riddle4.html";
+}else{
+alert("Wrong answer! Try again.");
+}
+}
+</script>
+</head>
+<body style="text-align:center;padding:40px;background:#fdf;">
+<h2>Riddle 3</h2>
+<p>I have cities but no houses, rivers but no water. What am I?</p>
+<input type="text" id="answer"><br>
+<button onclick="checkAnswer()">Submit</button>
+</body>
+</html>
