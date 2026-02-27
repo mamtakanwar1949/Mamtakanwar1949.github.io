@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karan Singh Rathore Store</title>
+
+<style>
+body{
+    font-family:Arial;
+    margin:0;
+    background:#f4f4f4;
+}
+
+header{
+    background:linear-gradient(90deg,#ff512f,#dd2476,#1e90ff);
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    padding:30px;
+}
+
+.card{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+button{
+    background:#1e90ff;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    margin-top:10px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.cart{
+    background:white;
+    margin:20px;
+    padding:20px;
+    border-radius:10px;
+}
+
+.whatsapp{
+    background:#25D366;
+    padding:12px 20px;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    display:inline-block;
+    margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Karan Singh Rathore</h1>
+<p>📞 7023537535</p>
+</header>
+
+<section class="products">
+
+<div class="card">
+<img src="facewash.jpg">
+<h3>Face Wash</h3>
+<p>₹120</p>
+<button onclick="addToCart('Face Wash',120)">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="hair.jpg">
+<h3>Hair Oil</h3>
+<p>₹180</p>
+<button onclick="addToCart('Hair Oil',180)">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="cream.jpg">
+<h3>Beauty Cream</h3>
+<p>₹210</p>
+<button onclick="addToCart('Beauty Cream',210)">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="lotion.jpg">
+<h3>Body Lotion</h3>
+<p>₹150</p>
+<button onclick="addToCart('Body Lotion',150)">Add to Cart</button>
+</div>
+
+</section>
+
+<div class="cart">
+<h2>🛒 Cart</h2>
+<ul id="cartItems"></ul>
+<h3>Total: ₹ <span id="total">0</span></h3>
+
+<a id="whatsappBtn" class="whatsapp" target="_blank">
+💬 Order on WhatsApp
+</a>
+</div>
+
+<script>
+let cart = [];
+let total = 0;
+
+function addToCart(name,price){
+    cart.push({name,price});
+    total += price;
+    updateCart();
+}
+
+function updateCart(){
+    let cartList = document.getElementById("cartItems");
+    cartList.innerHTML="";
+    
+    cart.forEach(item=>{
+        let li=document.createElement("li");
+        li.textContent=item.name+" - ₹"+item.price;
+        cartList.appendChild(li);
+    });
+
+    document.getElementById("total").innerText=total;
+
+    let message="Hello Karan Singh Rathore,%0A%0AMujhe ye products order karne hain:%0A";
+
+    cart.forEach(item=>{
+        message+=item.name+" - ₹"+item.price+"%0A";
+    });
+
+    message+="%0ATotal: ₹"+total;
+
+    document.getElementById("whatsappBtn").href=
+    "https://wa.me/917023537535?text="+message;
+}
+</script>
+
+</body>
+</html>
