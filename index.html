@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Glowveda - Herbal Beauty</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background: linear-gradient(-45deg,#ff9a9e,#fad0c4,#fbc2eb,#a6c1ee);
+    background-size:400% 400%;
+    animation: gradientBG 12s ease infinite;
+    text-align:center;
+    color:white;
+}
+
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+header{
+    padding:40px 20px;
+}
+
+h1{
+    font-size:32px;
+    margin-bottom:10px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{text-shadow:0 0 10px white;}
+    to{text-shadow:0 0 25px yellow;}
+}
+
+p{
+    font-size:18px;
+    max-width:500px;
+    margin:auto;
+}
+
+nav{
+    margin-top:30px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+nav a{
+    padding:12px 20px;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    background:rgba(0,0,0,0.6);
+    transition:0.3s;
+}
+
+nav a:hover{
+    background:yellow;
+    color:black;
+    transform:scale(1.1);
+}
+
+.highlight{
+    background:red !important;
+}
+
+.section{
+    margin:50px 20px;
+}
+
+.footer{
+    background:black;
+    padding:15px;
+    margin-top:40px;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🌿 Glowveda Herbal Beauty 🌿</h1>
+<p>Natural • Herbal • Chemical Free Products for Hair, Face & Body</p>
+</header>
+
+<nav>
+<a href="herbalglow.html">Aloe Vera</a>
+<a href="hairmagic.html">Hair Magic</a>
+<a href="bodybliss.html">Body Bliss</a>
+<a href="facecharm.html">Face Charm</a>
+<a href="offer.html" class="highlight">🔥 Offers</a>
+<a href="cart.html">🛒 Cart</a>
+<a href="office.html">🏢 Office</a>
+</nav>
+
+<div class="section">
+<h2>✨ Featured Products ✨</h2>
+<p>Discover our best-selling herbal skincare & haircare range made with love.</p>
+</div>
+
+<div class="footer">
+© 2026 Glowveda | Owner: Karan Singh | All Rights Reserved
+</div>
+
+</body>
+</html>
