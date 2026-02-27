@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhatsApp Number Setup</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:#f2f2f2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.box{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+    width:90%;
+    max-width:350px;
+    text-align:center;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:15px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#25D366;
+    color:white;
+    border:none;
+    border-radius:50px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+a{
+    display:block;
+    margin-top:20px;
+    padding:12px;
+    background:#128C7E;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+<h3>Add WhatsApp Number</h3>
+
+<input type="text" id="number" placeholder="Enter number like 917023537535">
+
+<button onclick="makeLink()">Create Button</button>
+
+<a id="link" target="_blank" style="display:none;">Open WhatsApp</a>
+</div>
+
+<script>
+function makeLink(){
+    var num = document.getElementById("number").value.trim();
+
+    if(num === ""){
+        alert("Please enter number");
+        return;
+    }
+
+    var finalLink = "https://wa.me/" + num;
+
+    var btn = document.getElementById("link");
+    btn.href = finalLink;
+    btn.style.display = "block";
+}
+</script>
+
+</body>
+</html>
