@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karan Singh Rathore | Patanjali Cosmetics</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Georgia, serif;
+    background:black;
+    color:gold;
+}
+
+/* ===== Navbar ===== */
+nav{
+    background:#111;
+    padding:15px;
+    text-align:center;
+}
+nav a{
+    color:gold;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:bold;
+}
+nav a:hover{
+    color:white;
+}
+
+/* ===== Banner ===== */
+.banner img{
+    width:100%;
+    height:450px;
+    object-fit:cover;
+    border-bottom:4px solid gold;
+}
+
+/* ===== Title ===== */
+.title{
+    text-align:center;
+    padding:30px;
+}
+.title h1{
+    margin:0;
+}
+
+/* ===== Products ===== */
+.products{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+.card{
+    background:#111;
+    width:250px;
+    margin:20px;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 0 20px gold;
+    text-align:center;
+}
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+.price{
+    color:#00ff7f;
+    font-weight:bold;
+}
+button{
+    background:gold;
+    border:none;
+    padding:10px 20px;
+    margin:10px;
+    cursor:pointer;
+    font-weight:bold;
+}
+button:hover{
+    background:white;
+}
+
+/* ===== Cart Section ===== */
+#cart{
+    padding:30px;
+    text-align:center;
+    color:white;
+}
+
+/* ===== Payment Section ===== */
+#payment{
+    padding:30px;
+    text-align:center;
+    color:white;
+}
+
+/* ===== Floating Buttons ===== */
+.whatsapp-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px 25px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+}
+.music-btn{
+    position:fixed;
+    bottom:90px;
+    right:20px;
+    background:gold;
+    color:black;
+    border:none;
+    padding:12px 20px;
+    border-radius:50px;
+    font-weight:bold;
+}
+
+footer{
+    background:#111;
+    text-align:center;
+    padding:15px;
+    color:white;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== Navbar ===== -->
+<nav>
+<a href="#">Home</a>
+<a href="#products">Products</a>
+<a href="#cart">Cart</a>
+<a href="#payment">Payment</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<!-- ===== Banner ===== -->
+<div class="banner">
+<img src="royal.jpg">
+</div>
+
+<div class="title">
+<h1>Karan Singh Rathore</h1>
+<p style="color:white;">Patanjali Cosmetics & FMCG Products</p>
+</div>
+
+<!-- ===== Products ===== -->
+<div class="products" id="products">
+
+<div class="card">
+<img src="facewash.jpg">
+<h3>Face Wash</h3>
+<p class="price">₹120</p>
+<button onclick="addToCart('Face Wash - ₹120')">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="hair.jpg">
+<h3>Hair Oil</h3>
+<p class="price">₹180</p>
+<button onclick="addToCart('Hair Oil - ₹180')">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="cream.jpg">
+<h3>Beauty Cream</h3>
+<p class="price">₹210</p>
+<button onclick="addToCart('Beauty Cream - ₹210')">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="lotion.jpg">
+<h3>Body Lotion</h3>
+<p class="price">₹150</p>
+<button onclick="addToCart('Body Lotion - ₹150')">Add to Cart</button>
+</div>
+
+</div>
+
+<!-- ===== Cart ===== -->
+<div id="cart">
+<h2>🛒 Cart Items</h2>
+<ul id="cartItems"></ul>
+</div>
+
+<!-- ===== Payment ===== -->
+<div id="payment">
+<h2>💳 Payment</h2>
+<p>UPI / Cash on Delivery Available</p>
+<button onclick="alert('Order Placed Successfully!')">Confirm Order</button>
+</div>
+
+<!-- ===== Contact ===== -->
+<div id="contact" style="text-align:center;padding:30px;color:white;">
+<p>📞 +91-7023537535</p>
+<p>📍 Kishangarh / Ajmer / Rajasthan</p>
+</div>
+
+<!-- ===== Music ===== -->
+<audio id="bgMusic" loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+<button onclick="document.getElementById('bgMusic').play()" class="music-btn">
+🎵 Play Music
+</button>
+
+<!-- ===== WhatsApp ===== -->
+<a href="https://wa.me/917023537535?text=Hello%20Karan%20Singh%20Rathore,%20mujhe%20Patanjali%20products%20order%20karne%20hain."
+class="whatsapp-btn" target="_blank">
+💬 Order on WhatsApp
+</a>
+
+<footer>
+© 2026 Karan Singh Rathore | All Rights Reserved
+</footer>
+
+<script>
+function addToCart(item){
+    var li=document.createElement("li");
+    li.textContent=item;
+    document.getElementById("cartItems").appendChild(li);
+}
+</script>
+
+</body>
+  </html>
