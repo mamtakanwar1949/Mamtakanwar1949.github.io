@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Special Offers - Glowveda</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#ff416c,#ff4b2b);
+    text-align:center;
+    color:white;
+}
+h1{
+    padding:20px;
+}
+.offer-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+.card{
+    background:white;
+    color:black;
+    width:280px;
+    margin:15px;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    position:relative;
+}
+.badge{
+    position:absolute;
+    top:-10px;
+    left:-10px;
+    background:red;
+    color:white;
+    padding:5px 15px;
+    border-radius:20px;
+    font-size:14px;
+}
+.old-price{
+    text-decoration:line-through;
+    color:gray;
+}
+.new-price{
+    font-size:22px;
+    color:green;
+}
+button{
+    padding:10px 20px;
+    background:#ff416c;
+    color:white;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+}
+button:hover{
+    background:#ff4b2b;
+}
+.timer{
+    margin:20px;
+    font-size:20px;
+    font-weight:bold;
+}
+a{
+    display:inline-block;
+    margin:15px;
+    padding:8px 20px;
+    background:black;
+    color:white;
+    text-decoration:none;
+    border-radius:20px;
+}
+</style>
+</head>
+<body>
+
+<h1>🔥 Special Festival Offers 🔥</h1>
+
+<div class="timer">
+Offer Ends In: <span id="countdown"></span>
+</div>
+
+<div class="offer-container">
+
+<div class="card">
+<div class="badge">30% OFF</div>
+<h3>Aloe Vera Gel</h3>
+<p class="old-price">₹150</p>
+<p class="new-price">₹105</p>
+<button onclick="addToCart('Aloe Vera Gel (Offer)',105)">Add to Cart</button>
+</div>
+
+<div class="card">
+<div class="badge">25% OFF</div>
+<h3>Kesh Kanti Shampoo</h3>
+<p class="old-price">₹200</p>
+<p class="new-price">₹150</p>
+<button onclick="addToCart('Kesh Kanti Shampoo (Offer)',150)">Add to Cart</button>
+</div>
+
+<div class="card">
+<div class="badge">40% OFF</div>
+<h3>Multani Mitti Face Pack</h3>
+<p class="old-price">₹180</p>
+<p class="new-price">₹108</p>
+<button onclick="addToCart('Face Pack (Offer)',108)">Add to Cart</button>
+</div>
+
+</div>
+
+<a href="cart.html">Go to Cart</a>
+<a href="index.html">Back to Home</a>
+
+<script src="cart.js"></script>
+
+<script>
+// Countdown Timer (1 Day)
+var countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000);
+
+var x = setInterval(function() {
+var now = new Date().getTime();
+var distance = countDownDate - now;
+
+var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+document.getElementById("countdown").innerHTML =
+hours + "h " + minutes + "m " + seconds + "s ";
+
+if (distance < 0) {
+clearInterval(x);
+document
