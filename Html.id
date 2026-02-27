@@ -1,0 +1,35 @@
+<!-- ===== WhatsApp Order Button ===== -->
+
+<style>
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(45deg,#25D366,#128C7E);
+    color: white;
+    font-size: 16px;
+    padding: 14px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.08);
+}
+
+.whatsapp-icon {
+    font-size: 20px;
+}
+</style>
+
+<a href="https://wa.me/917023537535?text=Hello%20I%20want%20to%20order%20product"
+   class="whatsapp-float" target="_blank">
+   <span class="whatsapp-icon">📲</span>
+   Order on WhatsApp
+</a>
